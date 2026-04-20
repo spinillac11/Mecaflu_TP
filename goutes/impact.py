@@ -41,12 +41,12 @@ for surf, val in data.items():
     slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
     
     plt.figure(figsize=(8, 5))
-    plt.scatter(x, y, label='Datos Experimentales')
+    plt.scatter(x, y, label='Données experimentales')
     plt.plot(x, slope*x + intercept, color='red', 
-             label=f'Ajuste: y = {slope:.2f}x + {intercept:.2f} (R²={r_value**2:.2f})')
+             label=f'Régression linéaire: y = {slope:.2f}x + {intercept:.2f} (R²={r_value**2:.2f})')
     plt.xlabel(r'$\sqrt{We}$')
     plt.ylabel(r'$(R_{max}/R_0)^2$')
-    plt.title(f'Etalement Máximo - Superficie: {surf}')
+    plt.title(f'Max Étalement - Surface: {surf}')
     plt.legend()
     plt.grid(True)
     plt.show()
@@ -61,12 +61,12 @@ for surf, val in data.items():
     slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
     
     plt.figure(figsize=(8, 5))
-    plt.scatter(x, y, label='Datos Experimentales', color='green')
+    plt.scatter(x, y, label='Données experimentales', color='green')
     plt.plot(x, slope*x + intercept, color='black', 
-             label=f'Ajuste Lineal (R²={r_value**2:.2f})')
+             label=f'Régression linéaire (R²={r_value**2:.2f})')
     plt.xlabel(r'$R_0^{3/2}$ ($m^{1.5}$)')
     plt.ylabel(r'$t_{etale}$ (s)')
-    plt.title(f'Tiempo de Etalement - Superficie: {surf}')
+    plt.title(f'Temps de Étalement - Surface: {surf}')
     plt.legend()
     plt.grid(True)
     plt.show()
@@ -81,12 +81,12 @@ y_h = t_rebote
 slope, intercept, r_value, p_value, std_err = stats.linregress(x_h, y_h)
 
 plt.figure(figsize=(8, 5))
-plt.scatter(x_h, y_h, color='blue', label='Datos Experimentales')
+plt.scatter(x_h, y_h, color='blue', label='Données experimentales')
 plt.plot(x_h, slope*x_h + intercept, color='orange', 
-         label=f'Ajuste Lineal (R²={r_value**2:.2f})')
+         label=f'Régression linéaire (R²={r_value**2:.2f})')
 plt.xlabel(r'$R_0^{3/2}$ ($m^{1.5}$)')
 plt.ylabel(r'$t_{rebote}$ (s)')
-plt.title('Tiempo de Rebote - Superficie Hidrofóbica')
+plt.title('Temps de rebond - Surface hydrophobe')
 plt.legend()
 plt.grid(True)
 plt.show()
